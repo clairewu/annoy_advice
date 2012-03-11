@@ -1,7 +1,7 @@
 ##匿名意见系统
 
 ###### 介绍
-匿名意见系统 是用 **Node.js** 和 **MongoDb** 开发的软件，界面优雅，功能丰富，小巧迅速.
+匿名意见系统 是用 **Node.js** 和 **MongoDb** 开发的软件.它是在Node Club基础上作了修改.
 
 ###### 安装部署
     // install node npm mongodb  
