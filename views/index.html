@@ -1,0 +1,33 @@
+<% if(locals.current_user){ %>
+<div id='sidebar'>
+	<div class='panel'>
+		<div class='inner'>
+			<%- partial('user/card',{object:current_user,as:'user'}) %>
+		</div>
+	</div>
+</div>
+<% } %>
+
+<div id='content'>
+	<div class='panel'>
+	    <% if(locals.current_user){ %>
+		<div class='header'>
+			<li>意见列表</li>
+		</div>		
+		<% if(locals.topics && topics.length > 0 ){ %>
+		<%- partial('topic/list', {topics:topics,pages:pages,current_pages:current_page,base:'/'}) %>
+		<% }else{ %>
+		<div class='inner'>
+			<p>无意见</p>
+		</div>
+		<% } %>
+		<% } else{ %>
+			<div class='inner'>
+				<p>欢迎来到匿名意见系统</p>
+			</div>
+			<% if(locals.replies && replies.length > 0 ){ %>
+				<%- partial('reply/list', {replies:replies,pages:pages,current_pages:current_page,base:'/'}) %>
+			<% } %>
+		<% } %>		
+	</div>
+</div>

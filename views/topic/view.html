@@ -1,0 +1,43 @@
+<div id='sidebar'>
+	<div class='panel'>
+	</div>
+</div>
+
+<div id='content'>
+	<div class='sep10'></div>
+	<div class='panel'>
+		<div class='header'>	
+			<span class='col_fade'>查看匿名意见</span>
+		</div>
+		<div class='inner'>
+			<div class='sep10'></div>
+			<form id='search_topic_form' class='form-horizontal' action='/topic/view' method='post'>
+				<% if(locals.topic_id){ %>
+					<div class='control-group'>
+						<div class='controls'>
+							<input type='hidden' id='topic_id' name='topic_id' value=<%= locals.topic_id %> />
+						</div>
+					</div>
+				<% }else{ %>
+					<div class='control-group'>
+						<label class='control-label' for='topic_id'>编号</label>
+						<div class='controls'>
+							<input class='input-xlarge' type='id' id='topic_id' name='topic_id' size='30' />
+						</div>
+					</div>
+				<% } %>
+				<div class='control-group'>
+					<label class='control-label' for='topic_pass'>密码</label>
+					<div class='controls'>
+						<input class='input-xlarge' type='password' id='password' name='password' size='30' />
+					</div>
+				</div>					
+				<input type='hidden' id='action' name='action' value='search_advice' />
+				<input type='hidden' name='_csrf' value='<%= csrf %>' />
+				<div class='form-actions'>
+					<input type='submit' class='btn' value='查询' />
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

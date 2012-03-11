@@ -1,0 +1,30 @@
+/**
+ * config
+ */
+
+exports.config = {
+	name: '匿名意见系统',
+	description: '',
+	host: 'http://127.0.0.1',
+	db: 'mongodb://127.0.0.1/anony_advice',
+	session_secret: 'anony_advice',
+	auth_cookie_name: 'anony_advice',
+	port: 99,
+	version: '0.0.1',
+
+	// topics list count
+	list_topic_count: 20,
+
+	// mail SMTP
+	mail_port: 465,
+	mail_user: 'user@gmail.com',
+	mail_pass: 'password',
+	mail_host: 'smtp.gmail.com',
+	mail_sender: 'user@gmail.com',
+	mail_use_authentication: true,
+
+	
+	// admins
+	admins: {admin:true}
+};
+
